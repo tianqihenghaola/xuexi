@@ -7,10 +7,10 @@ import CeShi from '../views/ceshi';
 Vue.use(Router);
 
 let routes = [
-    // {
-    //     path: '/',
-    //     redirect: '/home/CeShi'
-    // },
+    {
+        path: '/',
+        redirect: '/home/CeShi'
+    },
     {
         path: '/home',
         name: 'home',
