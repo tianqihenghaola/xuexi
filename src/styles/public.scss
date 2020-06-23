@@ -1,0 +1,72 @@
+// 拉伸铺满背景样式
+.background-full {
+  background: 0 0/100% 100% no-repeat;
+}
+
+// 常用布局排版
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+// 常用文字排版
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 滚动条默认样式定制
+.scrollbar-default {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+  }
+}
+
+// flex 布局
+.flex {
+  display: flex;
+}
+
+// 上下局下, 左右居左
+
+// 左右居中
+.flex-center-align {
+  @extend .flex;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-center-justify {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
