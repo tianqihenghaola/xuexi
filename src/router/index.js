@@ -13,11 +13,11 @@ Vue.use(Router);
 
 let routes = [
     {
-        path: '/login',
+        path: '/home/login',
         name: 'login',
         component: Login,
         beforEnter: (to, from, next) => {
-            next('/login')
+            next('/home/login')
         },
     },
     {
