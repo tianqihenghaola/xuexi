@@ -1,5 +1,5 @@
 <template>
-    <div class="header-container">
+    <div class="header-container full">
         <span>标题1</span>
         <span>标题2</span>
         <span>标题3</span>
@@ -16,6 +16,6 @@ export default {
 
 <style lang="scss" scoped>
 .header-container {
-    background-color: skyblue;
+    /*background-color: skyblue;*/
 }
 </style>

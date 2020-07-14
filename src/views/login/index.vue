@@ -57,10 +57,10 @@ export default {
             },
             rules: {
                 pass: [
-                    { validator: validatePass, trigger: 'blur' }
+                    {validator: validatePass, trigger: 'blur'}
                 ],
                 checkPass: [
-                    { validator: validatePass2, trigger: 'blur' }
+                    {validator: validatePass2, trigger: 'blur'}
                 ]
             }
         };
@@ -77,6 +77,7 @@ export default {
             });
         },
         resetForm(formName) {
+            console.log('formName--->>>', formName);
             this.$refs[formName].resetFields();
         }
     }
@@ -85,6 +86,10 @@ export default {
 
 <style lang="scss" scoped>
 .login-container {
-
+    .demo-ruleForm {
+        .el-input {
+            width: 300px;
+        }
+    }
 }
 </style>

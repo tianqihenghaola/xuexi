@@ -16,16 +16,17 @@ let routes = [
         path: '/home/login',
         name: 'login',
         component: Login,
-        beforEnter: (to, from, next) => {
-            next('/home/login')
-        },
+        // beforEnter: (to, from, next) => {
+        //     next('/home/login')
+        // },
     },
     {
         path: '/',
-        redirect: '/home/login'
+        // redirect: '/home/login'
+        redirect: '/home/ceShi'
     },
     {
-        path: '/home',
+        path: '/home/ceShi',
         name: 'home',
         component: Home,
         children: [
