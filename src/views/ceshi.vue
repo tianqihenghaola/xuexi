@@ -21,9 +21,9 @@
             <!--                    </li>-->
             <!--                </ul>-->
             <!--            </li>-->
-            <div class="lianxi-img" v-img="'../assets/images/v-img-lianxi.png'" alt="" ></div>
-            <img src="../assets/images/v-img-lianxi.png" alt="">
-<!--            <div style="background-image: url("'../assets/images/v-img-lianxi.png'")"></div>-->
+            <div class="lianxi-img" v-img="'../assets/images/v-img-lianxi.png'" alt=""></div>
+            <!--            <img src="../assets/images/v-img-lianxi.png" alt="">-->
+            <!--            <div style="background-image: url("'../assets/images/v-img-lianxi.png'")"></div>-->
         </div>
     </div>
 </template>
@@ -39,22 +39,23 @@
 // });
 
 import Vue from 'vue';
+
 Vue.directive('img', {
-   inserted: (el, binding) => {
-       let color = Math.floor(Math.random() * 1000000);
-       // el.style.backgroundColor = '#' + color;
-       console.log('111');
-       let img = new Image();
-       console.log('222');
-       img.src = binding.value;
-       console.log(img);
-       el.style.backgroundImage = 'url(' + binding.value + ')';
-       img.onload = function() {
-           console.log('444');
-           alert('success');
-           el.style.backgroundImage = 'url(' + binding.value + ')';
-       };
-   }
+    inserted: (el, binding) => {
+        let color = Math.floor(Math.random() * 1000000);
+        // el.style.backgroundColor = '#' + color;
+        console.log('111');
+        let img = new Image();
+        console.log('222');
+        img.src = binding.value;
+        console.log(img);
+        el.style.backgroundImage = 'url(' + binding.value + ')';
+        img.onload = function () {
+            console.log('444');
+            alert('success');
+            el.style.backgroundImage = 'url(' + binding.value + ')';
+        };
+    }
 });
 
 export default {
@@ -126,7 +127,7 @@ export default {
 
 <style lang="scss" scoped>
 .lianxi-img {
-   width: 300px;
-   height: 300px;
+    width: 300px;
+    height: 300px;
 }
 </style>
