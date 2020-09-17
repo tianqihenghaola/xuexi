@@ -24,6 +24,7 @@
             <div class="lianxi-img" v-img="'../assets/images/v-img-lianxi.png'" alt=""></div>
             <!--            <img src="../assets/images/v-img-lianxi.png" alt="">-->
             <!--            <div style="background-image: url("'../assets/images/v-img-lianxi.png'")"></div>-->
+            <el-button type="primary" @click="init">按钮</el-button>
         </div>
     </div>
 </template>
@@ -117,6 +118,30 @@ export default {
         //         return result;
         //     }
         // }
+        init() {
+            // new Promise(resolve => {
+            //     setTimeout(() => {
+            //         resolve('hello')
+            //     }, 2000)
+            // }).then(res => {
+            //     console.log('点击');
+            //     console.log(res)
+            // })
+            new Promise(resolve => {
+                setTimeout(() => {
+                    resolve('hello')
+                }, 2000)
+            }).then(val => {
+                console.log(val); //  参数val = 'hello'
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve('world')
+                    }, 2000)
+                })
+            }).then(val => {
+                console.log(val) // 参数val = 'world'
+            })
+        }
     },
     created() {
         // this.calculate('+', 1,2,3);
