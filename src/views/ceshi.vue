@@ -91,9 +91,37 @@ export default {
       //     author: '李四',
       //     isbn: '123466'
       // }
+      // arr: [
+      //   {
+      //     sort: '1',
+      //     name: '111'
+      //   },
+      //   {
+      //     sort: '2',
+      //     name: '222'
+      //   },
+      //   {
+      //     sort: '3',
+      //     name: '333'
+      //   },
+      //   {
+      //     sort: '4',
+      //     name: '444'
+      //   },
+      //   {
+      //     sort: '5',
+      //     name: '555'
+      //   },
+      // ]
     };
   },
   methods: {
+    // sortNumber() {
+    //   this.arr.sort((a, b) => {
+    //     return b.sort - a.sort
+    //   })
+    //   console.log(this.arr);
+    // },
     // add() {
     //     console.log('add');
     //     // Vue.set(this.book, 'la', '11111')
@@ -150,8 +178,6 @@ export default {
     },
   },
   created() {
-    // this.calculate('+', 1,2,3);
-    // this.calculate('*', 1,2,3);
   },
 };
 </script>

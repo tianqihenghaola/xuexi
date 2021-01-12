@@ -40,36 +40,29 @@
 </template>
 
 <script>
+import { subRoutes } from '../router/index.js';
+
 export default {
   data() {
-    return {
-      isCollapse: false,
-      menus: [
-        {
-          path: '1',
-          meta: {
-            label: '菜单一',
-            icon: 'el-icon-location',
-          },
-          children: [
-            {
-              path: '1-1',
-              meta: {
-                label: '选项一',
-                icon: 'el-icon-edit'
-              }
-            }
-          ]
-        },
-        {
-          path: '2',
-          label: '菜单二',
-          meta: {
-            label: '选项一',
-            icon: 'el-icon-location',
+    const menus = (function recursive(arr) {
+      const result = [];
+      arr.forEach(item => {
+        if (item.path && item.meta && !item.meta.isNotMenu) {
+          result.push(item);
+          const children = item.children;
+          if (children && children.length) {
+            item.children = recursive(children);
+          }
+          if (!item.children || !item.childrem.length) {
+            delete item.children;
           }
         }
-      ]
+      });
+      return result;
+    })(subRoutes);
+    return {
+      isCollapse: false,
+      menus
     };
   },
   methods: {
