@@ -10,6 +10,10 @@ import './plugins/element.js';
 // 样式
 import './styles/index.scss';
 
+// 打印版本信息
+import Version from '@/utils/version';
+Version.PrintVersionInfo()
+
 new Vue({
   router,
   render: h => h(App),
