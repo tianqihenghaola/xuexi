@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // 主容器组件
-import Home from '../layout';
+import Layout from '../layout';
 
 // 登录
 import Login from '@/views/login';
@@ -42,8 +42,8 @@ const routes = [
         path: '/',
         name: '',
         // component: () => import('../layout'),
-        component: Home,
-        redirect: subRoutes[1].path,
+        component: Layout,
+        // redirect: subRoutes[0].path,
         children: subRoutes
     }
 ];

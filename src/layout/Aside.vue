@@ -2,25 +2,28 @@
   <div class="navbar full-height">
     <div class="navbar-toggle text-center" @click="toggleCollapse()">
       <i
-          class="navbar-toggle-icon el-icon-d-arrow-left"
-          :class="{ active: isCollapse }"
+        class="navbar-toggle-icon el-icon-d-arrow-left"
+        :class="{ active: isCollapse }"
       ></i>
     </div>
     <el-menu
-        class="navbar-menu full-height"
-        :collapse="isCollapse"
-        background-color="#2f3a4c"
-        text-color="white"
-        active-text-color="#fff"
-        @open="handleOpen"
-        @close="handleClose"
-        router
-        :default-active="menus[0].path"
+      class="navbar-menu full-height"
+      :collapse="isCollapse"
+      background-color="#2f3a4c"
+      text-color="white"
+      active-text-color="#fff"
+      @open="handleOpen"
+      @close="handleClose"
+      router
+      :default-active="$route.path"
     >
       <span v-for="menu in menus" :key="menu.path">
         <el-submenu v-if="menu.children" :index="menu.path">
           <template slot="title">
-            <i class="navbar-menu-icon el-icon-menu" :class="menu.meta.icon"></i>
+            <i
+              class="navbar-menu-icon el-icon-menu"
+              :class="menu.meta.icon"
+            ></i>
             <span>{{ menu.meta.label }}</span>
           </template>
           <el-menu-item
@@ -42,13 +45,13 @@
 </template>
 
 <script>
-import { subRoutes } from '../router/index.js';
+import { subRoutes } from "../router/index.js";
 
 export default {
   data() {
     const menus = (function recursive(arr) {
       const result = [];
-      arr.forEach(item => {
+      arr.forEach((item) => {
         if (item.path && item.meta && !item.meta.isNotMenu) {
           result.push(item);
           const children = item.children;
@@ -64,7 +67,7 @@ export default {
     })(subRoutes);
     return {
       isCollapse: false,
-      menus
+      menus,
     };
   },
   methods: {
@@ -77,9 +80,9 @@ export default {
     // 水平折叠菜单
     toggleCollapse() {
       this.isCollapse = !this.isCollapse;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

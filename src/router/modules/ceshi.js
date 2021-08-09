@@ -6,7 +6,6 @@ export default {
         label: '测试',
         permission: true
     },
-    redirect: '/ceshi/ceshi01',
     children: [
         {
             path: '/ceshi/ceshi01',
