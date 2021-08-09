@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <!-- <title><%= webpackConfig.title %></title> -->
+    <title></title>
+    <script type="text/javascript" src="config.js"></script>
+    <script>
+      document.write("<s"+"cript type='text/javascript' src='config.js?"+new Date().getTime()+"'></scr"+"ipt>");
+    </script>
+    <script>
+      window.onload = function () {
+        document.querySelector('title').innerText = window.CONFIG.title;
+      }
+    </script>
   </head>
   <body>
     <noscript>
