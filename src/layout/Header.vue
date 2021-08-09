@@ -1,21 +1,18 @@
 <template>
-    <div class="header-container full">
-        <span>标题1</span>
-        <span>标题2</span>
-        <span>标题3</span>
-        <span>标题4</span>
-        <span>标题5</span>
-    </div>
+  <div class="header-container full">
+    <h1>Logo</h1>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "header"
-}
+  name: "header",
+};
 </script>
 
 <style lang="scss" scoped>
 .header-container {
-    /*background-color: skyblue;*/
+//   background-color: rgb(45, 52, 66);
+  line-height: 100px;
 }
 </style>

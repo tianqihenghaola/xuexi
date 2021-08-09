@@ -1,38 +1,39 @@
 <template>
   <el-container class="full-height">
-    <el-header class="flex-center-align">
-      <Header/>
+    <el-header class="flex-center-align" height="100px">
+      <Header />
     </el-header>
     <el-container>
-      <el-aside width="200px">
+      <el-aside width="auto">
         <Aside />
       </el-aside>
       <el-main>
-        <router-view/>
+        <router-view />
       </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
-import Header from './Header';
-import Aside from './Aside';
+import Header from "./Header";
+import Aside from "./Aside";
 
 export default {
   name: "index",
   components: {
     Header,
-    Aside
-  }
-}
+    Aside,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .el-header {
-  background-color: skyblue;
+  background-color: #27303f;
+  color: #fff;
 }
 
-.el-aside {
-  background-color: pink;
-}
+// .el-aside {
+//   background-color: pink;
+// }
 </style>

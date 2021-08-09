@@ -9,9 +9,11 @@ import Login from '@/views/login';
 
 Vue.use(Router);
 
-import ceshiOne from './modules/ceshi-one';
+import home from './modules/home.js';
+import ceshi from './modules/ceshi.js';
 export const subRoutes = [
-    ceshiOne
+    home,
+    ceshi
 ]
 
 const routes = [
@@ -39,8 +41,9 @@ const routes = [
     {
         path: '/',
         name: '',
-        component: () => import('../layout'),
-        redirect: subRoutes[0].path,
+        // component: () => import('../layout'),
+        component: Home,
+        redirect: subRoutes[1].path,
         children: subRoutes
     }
 ];

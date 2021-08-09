@@ -1,5 +1,5 @@
 <template>
-  <div>测试页一</div>
+  <div>ceshi-02</div>
 </template>
 
 <script>

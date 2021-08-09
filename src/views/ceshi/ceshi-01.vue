@@ -21,11 +21,11 @@
       <!--                    </li>-->
       <!--                </ul>-->
       <!--            </li>-->
-      <div
+      <!-- <div
         class="lianxi-img"
         v-img="'../assets/images/v-img-lianxi.png'"
         alt=""
-      ></div>
+      ></div> -->
       <!--            <img src="../assets/images/v-img-lianxi.png" alt="">-->
       <!--            <div style="background-image: url("'../assets/images/v-img-lianxi.png'")"></div>-->
       <el-button type="primary" @click="init">按钮</el-button>
@@ -43,25 +43,25 @@
 //    }
 // });
 
-import Vue from "vue";
+// import Vue from "vue";
 
-Vue.directive("img", {
-  inserted: (el, binding) => {
-    let color = Math.floor(Math.random() * 1000000);
-    // el.style.backgroundColor = '#' + color;
-    console.log("111");
-    let img = new Image();
-    console.log("222");
-    img.src = binding.value;
-    console.log(img);
-    el.style.backgroundImage = "url(" + binding.value + ")";
-    img.onload = function () {
-      console.log("444");
-      alert("success");
-      el.style.backgroundImage = "url(" + binding.value + ")";
-    };
-  },
-});
+// Vue.directive("img", {
+//   inserted: (el, binding) => {
+//     let color = Math.floor(Math.random() * 1000000);
+//     // el.style.backgroundColor = '#' + color;
+//     console.log("111");
+//     let img = new Image();
+//     console.log("222");
+//     img.src = binding.value;
+//     console.log(img);
+//     el.style.backgroundImage = "url(" + binding.value + ")";
+//     img.onload = function () {
+//       console.log("444");
+//       alert("success");
+//       el.style.backgroundImage = "url(" + binding.value + ")";
+//     };
+//   },
+// });
 
 export default {
   data() {
@@ -159,26 +159,30 @@ export default {
       //     console.log('点击');
       //     console.log(res)
       // })
-      new Promise((resolve) => {
-        setTimeout(() => {
-          resolve("hello");
-        }, 2000);
-      })
-        .then((val) => {
-          console.log(val); //  参数val = 'hello'
-          return new Promise((resolve) => {
-            setTimeout(() => {
-              resolve("world");
-            }, 2000);
-          });
-        })
-        .then((val) => {
-          console.log(val); // 参数val = 'world'
-        });
+      // new Promise((resolve) => {
+      //   setTimeout(() => {
+      //     resolve("hello");
+      //   }, 2000);
+      // })
+      //   .then((val) => {
+      //     console.log(val); //  参数val = 'hello'
+      //     return new Promise((resolve) => {
+      //       setTimeout(() => {
+      //         resolve("world");
+      //       }, 2000);
+      //     });
+      //   })
+      //   .then((val) => {
+      //     console.log(val); // 参数val = 'world'
+      //   });
+      this.sunjibuerzhi();
     },
+    sunjibuerzhi() {
+      const randdomBooleana = () => Math.random() >= 0.5;
+      console.log(randomBoolean());
+    }
   },
-  created() {
-  },
+  created() {},
 };
 </script>
 

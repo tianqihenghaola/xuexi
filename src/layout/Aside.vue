@@ -14,11 +14,13 @@
         active-text-color="#fff"
         @open="handleOpen"
         @close="handleClose"
+        router
+        :default-active="menus[0].path"
     >
       <span v-for="menu in menus" :key="menu.path">
         <el-submenu v-if="menu.children" :index="menu.path">
           <template slot="title">
-            <i class="navbar-menu-icon" :class="menu.meta.icon"></i>
+            <i class="navbar-menu-icon el-icon-menu" :class="menu.meta.icon"></i>
             <span>{{ menu.meta.label }}</span>
           </template>
           <el-menu-item
@@ -31,7 +33,7 @@
           </el-menu-item>
         </el-submenu>
         <el-menu-item v-else :index="menu.path">
-          <i class="navbar-menu-icon" :class="menu.meta.icon"></i>
+          <i class="navbar-menu-icon el-icon-menu" :class="menu.meta.icon"></i>
           <span slot="title">{{ menu.meta.label }}</span>
         </el-menu-item>
       </span>
@@ -53,7 +55,7 @@ export default {
           if (children && children.length) {
             item.children = recursive(children);
           }
-          if (!item.children || !item.childrem.length) {
+          if (!item.children || !item.children.length) {
             delete item.children;
           }
         }
