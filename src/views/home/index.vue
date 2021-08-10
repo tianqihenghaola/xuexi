@@ -3,9 +3,7 @@
     <div>测试页一</div>
     <div>true：{{ zhengque }}</div>
     <div>false：{{ cuowu }}</div>
-    <el-button @click="sunjibuerzhi" type="primary" size="small"
-      >按钮</el-button
-    >
+    <el-button @click="sunjibuerzhi" type="primary" size="small">按钮</el-button>
     <el-button @click="chongzhi" size="small">重置</el-button>
   </div>
 </template>

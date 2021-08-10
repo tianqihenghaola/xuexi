@@ -4,34 +4,12 @@ const Version = {
   BUILD_TIME: "2021年8月3日16:48:07",
   BUILD_PERSIONNEL: "@yanglongbin",
   PrintVersionInfo() {
-    console.group(
-      "%c┏ ---------------------------------",
-      "color: cornflowerblue;font-size:10px"
-    );
-    console.log(
-      "%c【项目名称】:",
-      "color: dodgerblue;font-size:12px",
-      this.PROJECT_NAME
-    );
-    console.log(
-      "%c【当前版本】:",
-      "color: dodgerblue;font-size:12px",
-      this.PROJECT_VERSION
-    );
-    console.log(
-      "%c【打包时间】:",
-      "color: dodgerblue;font-size:12px",
-      this.BUILD_TIME
-    );
-    console.log(
-      "%c【打包人员】:",
-      "color: dodgerblue;font-size:12px",
-      this.BUILD_PERSIONNEL
-    );
-    console.log(
-      "%c--------------------------------- ┛",
-      "color: cornflowerblue;font-size:10px"
-    );
+    console.group("%c┏ ---------------------------------", "color: cornflowerblue;font-size:10px");
+    console.log("%c【项目名称】:", "color: dodgerblue;font-size:12px", this.PROJECT_NAME);
+    console.log("%c【当前版本】:", "color: dodgerblue;font-size:12px", this.PROJECT_VERSION);
+    console.log("%c【打包时间】:", "color: dodgerblue;font-size:12px", this.BUILD_TIME);
+    console.log("%c【打包人员】:", "color: dodgerblue;font-size:12px", this.BUILD_PERSIONNEL);
+    console.log("%c--------------------------------- ┛", "color: cornflowerblue;font-size:10px");
     console.groupEnd();
     // 输出信息时，在最前面加一个红色的叉，表示出错，同时会显示错误发生的堆栈。
     // console.error("Error: %s (%i)", "Server is not responding",500)

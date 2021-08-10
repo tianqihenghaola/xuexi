@@ -12,6 +12,7 @@ export default {
   },
   created() {
     // console.log('this.$route.path--->>>', this.$route.path);
+    // 每次刷新重定向到首页
     // if (this.$route.path !== '/home') {
     //     this.$router.replace('/home')
     // }

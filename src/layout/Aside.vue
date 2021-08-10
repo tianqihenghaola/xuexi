@@ -1,10 +1,7 @@
 <template>
   <div class="navbar full-height">
     <div class="navbar-toggle text-center" @click="toggleCollapse()">
-      <i
-        class="navbar-toggle-icon el-icon-d-arrow-left"
-        :class="{ active: isCollapse }"
-      ></i>
+      <i class="navbar-toggle-icon el-icon-d-arrow-left" :class="{ active: isCollapse }"></i>
     </div>
     <el-menu
       class="navbar-menu full-height"
@@ -20,17 +17,10 @@
       <span v-for="menu in menus" :key="menu.path">
         <el-submenu v-if="menu.children" :index="menu.path">
           <template slot="title">
-            <i
-              class="navbar-menu-icon el-icon-menu"
-              :class="menu.meta.icon"
-            ></i>
+            <i class="navbar-menu-icon el-icon-menu" :class="menu.meta.icon"></i>
             <span>{{ menu.meta.label }}</span>
           </template>
-          <el-menu-item
-            v-for="subMenu in menu.children"
-            :key="subMenu.path"
-            :index="subMenu.path"
-          >
+          <el-menu-item v-for="subMenu in menu.children" :key="subMenu.path" :index="subMenu.path">
             <i :class="subMenu.meta.icon"></i>
             <span slot="title">{{ subMenu.meta.label }}</span>
           </el-menu-item>

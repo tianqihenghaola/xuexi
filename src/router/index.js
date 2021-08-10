@@ -5,7 +5,7 @@ import Router from "vue-router";
 import Layout from "../layout";
 
 // 登录
-// import Login from "@/views/login";
+import Login from "@/views/login";
 
 Vue.use(Router);
 
@@ -14,14 +14,14 @@ import ceshi from "./modules/ceshi.js";
 export const subRoutes = [home, ceshi];
 
 const routes = [
-  // {
-  //     path: '/home/login',
-  //     name: 'login',
-  //     component: Login,
-  //     // beforEnter: (to, from, next) => {
-  //     //     next('/home/login')
-  //     // },
-  // },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+    beforEnter: (to, from, next) => {
+      next("/login");
+    },
+  },
   // {
   //     path: '/',
   //     // redirect: '/home/login'

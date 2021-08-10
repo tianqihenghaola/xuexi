@@ -1,7 +1,7 @@
 export default {
   path: "/ceshi",
   name: "ceshi",
-  component: () => import("../../views/ceshi"),
+  component: () => import("@/views/ceshi"),
   meta: {
     label: "测试",
     permission: true,
