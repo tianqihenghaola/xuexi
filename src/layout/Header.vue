@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 .header-container {
-//   background-color: rgb(45, 52, 66);
+  //   background-color: rgb(45, 52, 66);
   line-height: 100px;
 }
 </style>

@@ -33,11 +33,10 @@ export default {
       this.cuowu = 0;
     },
     handleOpen() {
-      console.log('111')
-    }
+      console.log("111");
+    },
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

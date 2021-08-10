@@ -178,9 +178,9 @@ export default {
       this.sunjibuerzhi();
     },
     sunjibuerzhi() {
-      const randdomBooleana = () => Math.random() >= 0.5;
-      console.log(randomBoolean());
-    }
+      // const randdomBooleana = () => Math.random() >= 0.5;
+      // console.log(randomBoolean());
+    },
   },
   created() {},
 };
