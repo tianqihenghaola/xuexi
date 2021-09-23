@@ -43,7 +43,7 @@ module.exports = {
                */
   // jsxBracketSameLine: true
 
-  //   singleQuote: true, // 使用单引号
+  singleQuote: true, // 使用单引号
   arrowParens: "always", // 给箭头函数加入括号
   semi: true, // 在末尾是否加分号
   endOfLine: "auto", // 行尾换行样式

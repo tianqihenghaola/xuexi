@@ -10,6 +10,9 @@ import "./plugins/element.js";
 // 样式
 import "./styles/index.scss";
 
+// 全局组件
+import "./components/index";
+
 // 打印版本信息
 import Version from "@/utils/version";
 Version.PrintVersionInfo();

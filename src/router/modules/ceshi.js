@@ -27,5 +27,15 @@ export default {
         permission: true,
       },
     },
+    {
+      path: "/ceshi/ceshi03",
+      name: "ceshi03",
+      component: () => import("@/views/ceshi/ceshi-03.vue"),
+      meta: {
+        label: "测试-03",
+        icon: "el-icon-menu",
+        permission: true,
+      },
+    },
   ],
 };
